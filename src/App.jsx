@@ -1,11 +1,16 @@
 // import reactLogo from './assets/react.svg'
 // import './App.css'
 
+import Pokeimage from "./components/Pokeimage";
+import PokemonProvider from "./context/PokeContext";
+
 function App() {
   
   return (
-    <h1 className="text-3xl font-bold underline">Hello world</h1>
-  )
-}
+    <PokemonProvider>
+      <Pokeimage />
+    </PokemonProvider>
+  );
+};
 
-export default App
+export default App;
