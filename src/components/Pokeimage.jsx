@@ -20,12 +20,16 @@ function Pokeimage() {
 
     // console.log(nextPokemon);
 
+
     if(pokemon.length===0){
         return <h1>Loading ...</h1>
     } else {
+        // console.log(pokemon.sprites.versions);
         return (
             <div>
-                <img src={pokemon.sprites.front_default} alt="pokemon_img" />
+                <img src={pokemon.sprites.other["official-artwork"].front_default} alt="pokemon_img" />
+                <img src={pokemon.sprites.versions["generation-vii"].icons.front_default} alt="pokemon_img" />
+                {/* <img src={pokemon.sprites.versions["generation-viii"].icons.front_default} alt="pokemon_img" /> */}
                 <h1>{pokemon.name} numero {nextPokemon}  </h1>
                 <button onClick={handleNext} >Next</button>
                 <button onClick={handlePrev} >Prev</button>
