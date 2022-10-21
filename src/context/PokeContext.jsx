@@ -12,21 +12,38 @@ export const usePoke = () =>{
 function PokemonProvider({children}) {
 
     const [pokemon, setPokemon] = useState([]);
+    const [nextPokemon, setNextPokemon] = useState(1);
 
-    const getPokemon= async (pokeid=6)=>{
-        const res = await getPokemonRequests(pokeid);
+    const getPokemon= async ()=>{
+        const res = await getPokemonRequests(nextPokemon);
         setPokemon(res.data);
         // console.log(res.data);
         // return res.data;
     };
 
+    const handleNext = () =>{
+        setNextPokemon(nextPokemon+1);
+        // console.log(nextPokemon);
+        getPokemon(nextPokemon);
+        // console.log(nextPokemon);
+    };
+
+    const handlePrev=()=>{
+        setNextPokemon(nextPokemon-1);
+        getPokemon(nextPokemon);
+    };
+
     useEffect(()=>{
         getPokemon();
-    }, []);
+    }, [nextPokemon]);
     
+
     return (
         <pokeContext.Provider value={{
-            pokemon
+            pokemon,
+            handleNext,
+            nextPokemon,
+            handlePrev
         }}
         
         >
