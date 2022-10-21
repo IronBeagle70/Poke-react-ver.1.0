@@ -2,17 +2,19 @@ import React from 'react'
 import { usePoke } from '../context/PokeContext';
 
 function Pokeimage() {
+    const {pokemon} = usePoke();
 
-    const { pokemon } = usePoke();
-
-    console.log(pokemon);
-
-    return (
-        <div>
-            <img src="" alt="pokemon_img" />
-            <h1>hola mundo</h1>
-        </div>
-    );
+    
+    if(pokemon.length===0){
+        return <h1>esta vacio</h1>
+    } else {
+        return (
+            <div>
+                <img src={pokemon.sprites.front_default} alt="pokemon_img" />
+                <h1>{pokemon.name}</h1>
+            </div>
+        );
+    };
 };
 
 export default Pokeimage;

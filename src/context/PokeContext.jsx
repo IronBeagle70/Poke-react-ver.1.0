@@ -11,25 +11,25 @@ export const usePoke = () =>{
 
 function PokemonProvider({children}) {
 
-    const [pokemon, setPokemon] = useState();
-    // console.log(pokemon);
+    const [pokemon, setPokemon] = useState([]);
 
     const getPokemon= async (pokeid=6)=>{
         const res = await getPokemonRequests(pokeid);
-        // console.log(res.data);
         setPokemon(res.data);
-        console.log(res.data.sprites.front_default);
+        // console.log(res.data);
+        // return res.data;
     };
 
     useEffect(()=>{
         getPokemon();
     }, []);
-
+    
     return (
         <pokeContext.Provider value={{
-            pokemon,
-            getPokemon
-        }}>
+            pokemon
+        }}
+        
+        >
             {children}
         </pokeContext.Provider>
     );
