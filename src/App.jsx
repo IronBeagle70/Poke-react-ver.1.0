@@ -2,6 +2,7 @@
 // import './App.css'
 
 import Pokeimage from "./components/Pokeimage";
+import Pokeinfo from "./components/Pokeinfo";
 import PokemonProvider from "./context/PokeContext";
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
   return (
     <PokemonProvider>
       <Pokeimage />
+      <Pokeinfo />
     </PokemonProvider>
   );
 };

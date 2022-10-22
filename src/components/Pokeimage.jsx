@@ -24,13 +24,15 @@ function Pokeimage() {
     if(pokemon.length===0){
         return <h1>Loading ...</h1>
     } else {
-        // console.log(pokemon.sprites.versions);
+        // console.log(pokemon.types[0].type.name);
+        // pokemon.types.map(type =>(
+        //     console.log(type.type.name)
+        // ));
         return (
             <div>
                 <img src={pokemon.sprites.other["official-artwork"].front_default} alt="pokemon_img" />
-                <img src={pokemon.sprites.versions["generation-vii"].icons.front_default} alt="pokemon_img" />
                 {/* <img src={pokemon.sprites.versions["generation-viii"].icons.front_default} alt="pokemon_img" /> */}
-                <h1>{pokemon.name} numero {nextPokemon}  </h1>
+                <h1>nro. {nextPokemon}</h1>
                 <button onClick={handleNext} >Next</button>
                 <button onClick={handlePrev} >Prev</button>
             </div>
