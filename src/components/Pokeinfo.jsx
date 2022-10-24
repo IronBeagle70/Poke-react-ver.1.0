@@ -6,13 +6,13 @@ import Button from './Button';
 
 function Pokeinfo() {
 
-    const { pokemon } = usePoke();
+    const { pokemon, addPokeValue , pokeValue, getPokemon, handleSubmit } = usePoke();
 
-    const [pokeValue, setPokeValue] = useState('');
+    // const [pokeValue, setPokeValue] = useState('');
 
-    const addPokeValue = (val) => {
-        setPokeValue(pokeValue + val );
-    };
+    // const addPokeValue = (val) => {
+    //     setPokeValue(pokeValue + val );
+    // };
 
     // const handleSubmit = async (e) =>{
     //     e.preventDefault();
@@ -42,7 +42,7 @@ function Pokeinfo() {
                 ))}
                 <p>{pokeValue}</p>
                 {/* {console.log(typeof pokeValue)} */}
-                <button onClick={()=>console.log(`pokemon numero ${parseInt(pokeValue)} encontrado`)} >Search</button>
+                <button onClick={handleSubmit} >Search</button>
             </div>
         );
     }

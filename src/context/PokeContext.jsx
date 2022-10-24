@@ -33,12 +33,22 @@ function PokemonProvider({children}) {
         getPokemon(nextPokemon);
     };
 
-    // const [pokeValue, setPokeValue] = useState('');
+    const [pokeValue, setPokeValue] = useState('');
 
-    // const addPokeValue = (val) => {
-    //     setPokeValue(pokeValue + val );
-    //     console.log(pokeValue);
-    // };
+    const addPokeValue = (val) => {
+        setPokeValue(pokeValue + val );
+        // console.log(pokeValue);
+        // getPokemon(pokeValue);
+        getPokemon(parseInt(pokeValue));
+    };
+
+    const handleSubmit = async (e) =>{
+        e.preventDefault();
+        // console.log(getPokemon(pokeValue));
+        setPokeValue('');
+        console.log(parseInt(pokeValue));
+        setNextPokemon(parseInt(pokeValue));
+    };
 
     useEffect(()=>{
         getPokemon();
@@ -52,7 +62,10 @@ function PokemonProvider({children}) {
             handleNext,
             nextPokemon,
             handlePrev,
-            getPokemon
+            getPokemon,
+            addPokeValue,
+            pokeValue,
+            handleSubmit
         }}
         
         >
