@@ -33,17 +33,26 @@ function PokemonProvider({children}) {
         getPokemon(nextPokemon);
     };
 
+    // const [pokeValue, setPokeValue] = useState('');
+
+    // const addPokeValue = (val) => {
+    //     setPokeValue(pokeValue + val );
+    //     console.log(pokeValue);
+    // };
+
     useEffect(()=>{
         getPokemon();
     }, [nextPokemon]);
-    
+
+
 
     return (
         <pokeContext.Provider value={{
             pokemon,
             handleNext,
             nextPokemon,
-            handlePrev
+            handlePrev,
+            getPokemon
         }}
         
         >
