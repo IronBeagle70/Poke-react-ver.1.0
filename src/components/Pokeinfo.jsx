@@ -31,21 +31,26 @@ function Pokeinfo() {
         <h1>Loading...</h1>
     } else{
         return (
-            <div> 
+            <div className='bg-slate-800 w-[400px] h-[600px]'> 
                 <p>{pokemon.name}</p>
-                <img src={pokemon.sprites.versions["generation-vii"].icons.front_default} alt="pokemon_img" />
                 <p>Type {pokemon.types.map(type =>(
                         `${type.type.name} `
                 ))}</p>
+                <p>{(specie.flavor_text_entries[1].flavor_text).replace("\f"," ")}</p>
+
                 {numbers.map(number=>(
                     <Button manejarClick={addPokeValue} key={number.toString()} >{number}</Button>
                 ))}
+                <button onClick={handleSubmit} >Search</button>
+
+                <p>{specie.genera[7].genus}</p>
+                <img src={pokemon.sprites.versions["generation-vii"].icons.front_default} alt="pokemon_img" />
+                
                 <p>{pokeValue}</p>
                 {/* {console.log(typeof pokeValue)} */}
-                <p>{specie.genera[7].genus}</p>
-                <p>{(specie.flavor_text_entries[1].flavor_text).replace("\f"," ")}</p>
+                
+                
                 {console.log(specie.flavor_text_entries[1].flavor_text)}
-                <button onClick={handleSubmit} >Search</button>
             </div>
         );
     }

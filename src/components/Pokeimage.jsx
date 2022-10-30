@@ -29,12 +29,18 @@ function Pokeimage() {
         //     console.log(type.type.name)
         // ));
         return (
-            <div>
-                <img src={pokemon.sprites.other["official-artwork"].front_default} alt="pokemon_img" />
+            <div className='bg-poke-red w-[400px] h-[600px] flex flex-col justify-center' >
+                <div className='bg-poke-blue w-60 h-60 mx-auto'>
+                    <img className='w-60' src={pokemon.sprites.other["official-artwork"].front_default} alt="pokemon_img" />
+                </div>
                 {/* <img src={pokemon.sprites.versions["generation-viii"].icons.front_default} alt="pokemon_img" /> */}
-                <h1>nro. {nextPokemon}</h1>
-                <button onClick={handleNext} >Next</button>
-                <button onClick={handlePrev} >Prev</button>
+                <div className='flex justify-evenly mt-9'>
+                    <h1 className='bg-poke-green p-4 w-24 rounded-md text-center' >nro. {nextPokemon}</h1>
+                    <div>
+                        <button onClick={handleNext} >Next</button>
+                        <button onClick={handlePrev} >Prev</button>
+                    </div>
+                </div>
             </div>
         );
     };

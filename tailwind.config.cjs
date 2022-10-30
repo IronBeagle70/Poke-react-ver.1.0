@@ -5,7 +5,13 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors:{
+        'poke-red':'#DC0A2D',
+        'poke-blue':'#28AAFD',
+        'poke-green':'#51AE5F'
+      }
+    },
   },
   plugins: [],
 }
