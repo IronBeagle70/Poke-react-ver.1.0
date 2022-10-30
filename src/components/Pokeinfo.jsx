@@ -6,7 +6,7 @@ import Button from './Button';
 
 function Pokeinfo() {
 
-    const { pokemon, addPokeValue , pokeValue, getPokemon, handleSubmit } = usePoke();
+    const { pokemon, addPokeValue , pokeValue, handleSubmit, specie } = usePoke();
 
     // const [pokeValue, setPokeValue] = useState('');
 
@@ -42,6 +42,9 @@ function Pokeinfo() {
                 ))}
                 <p>{pokeValue}</p>
                 {/* {console.log(typeof pokeValue)} */}
+                <p>{specie.genera[7].genus}</p>
+                <p>{(specie.flavor_text_entries[1].flavor_text).replace("\f"," ")}</p>
+                {console.log(specie.flavor_text_entries[1].flavor_text)}
                 <button onClick={handleSubmit} >Search</button>
             </div>
         );

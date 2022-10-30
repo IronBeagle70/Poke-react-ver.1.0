@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
-import { getPokemonRequests } from '../api/pokemon';
+import { getPokemonRequests, getPokemonSpeciesRequests } from '../api/pokemon';
 
 const pokeContext = createContext();
 
@@ -8,15 +8,21 @@ export const usePoke = () =>{
     return context;
 };
 
-
 function PokemonProvider({children}) {
 
     const [pokemon, setPokemon] = useState([]);
+    const [specie, setSpecie] = useState([]);
     const [nextPokemon, setNextPokemon] = useState(1);
 
+    // get functions
     const getPokemon= async ()=>{
-        const res = await getPokemonRequests(nextPokemon);
-        setPokemon(res.data);
+        const res1 = await getPokemonRequests(nextPokemon);
+        const res2 = await getPokemonSpeciesRequests(nextPokemon);
+        setPokemon(res1.data);
+        // console.log(res2.data);
+        setSpecie(res2.data);
+        console.log(pokemon);
+        console.log(specie);
         // console.log(res.data);
         // return res.data;
     };
@@ -65,7 +71,8 @@ function PokemonProvider({children}) {
             getPokemon,
             addPokeValue,
             pokeValue,
-            handleSubmit
+            handleSubmit,
+            specie
         }}
         
         >
