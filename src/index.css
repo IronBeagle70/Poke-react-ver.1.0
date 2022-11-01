@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+.trapecio-2 {
+  width: 73.8px;
+  height: 30px;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+  border-top: 8px solid #89061C;
+  transform: rotate(-45deg);
+}
+
+.trapecio-1 {
+  width: 148px;
+  height: 0px;
+  border-right: 8px solid transparent;
+  border-left: 0px solid transparent;
+  border-top: 8px solid #89061C;
+}
+
 /* :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
