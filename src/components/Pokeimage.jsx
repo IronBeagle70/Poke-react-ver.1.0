@@ -30,8 +30,8 @@ function Pokeimage() {
         //     console.log(type.type.name)
         // ));
         return (
-            <div className='bg-poke-red w-[400px] h-[600px] flex flex-col  rounded-2xl' >
-                <div className='flex mb-2'>
+            <div className='bg-poke-red bg-gradient-to-tr from-poke-new-red-img w-[400px] h-[608px] flex flex-col  rounded-2xl  ' >
+                <div className='flex mb-2 '>
                     <div className='relative'>
                         <div className='w-20 h-20 rounded-full bg-poke-blue-img border-solid border-4 border-poke-white-img relative my-2 mx-7'>
                             <div className='w-6 h-6 rounded-full bg-poke-sky-img absolute left-2 top-3 '></div>
@@ -59,7 +59,7 @@ function Pokeimage() {
                         <div className='w-[212px] h-3 bg-poke-new-red-top absolute right-0' ></div>
                     </div>
                 </div>
-                <div className='  mx-auto bg-poke-white-img p-8 rounded relative my-3'>
+                <div className='  mx-auto bg-poke-white-img p-8 rounded relative my-3 border-b-4 border-poke-border-button'>
                     <div className='flex flex-row items-center justify-evenly absolute top-[10px] left-0 right-0'>
                         <div className='w-3 h-3 rounded-full bg-poke-red'></div>
                         <div className='w-3 h-3 rounded-full bg-poke-red'></div>
@@ -86,7 +86,7 @@ function Pokeimage() {
                             <div className='w-12 h-3 rounded bg-poke-blue-img border-solid border-[1px] border-poke-new-black-img' ></div>
                         </div>
                         <div className='flex justify-center'>
-                            <h1 className='bg-poke-green p-4 w-24 rounded-md text-center border-solid border-[1px] border-poke-new-black-img flex items-center justify-center' >nro. {nextPokemon}</h1>
+                            <h1 className='bg-poke-green p-4 w-24 rounded-md text-center border-solid border-[1px] border-poke-new-black-img flex items-center justify-center text-base ' >nro. {nextPokemon}</h1>
                         </div>
                     </div>
                     <div className='flex items-start justify-center mx-auto' >

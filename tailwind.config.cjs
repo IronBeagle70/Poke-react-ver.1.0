@@ -18,7 +18,11 @@ module.exports = {
         'poke-new-green-img':'#4FAE5D',
         'poke-new-yellow-img':'#FFE748',
         'poke-new-black-img':'#191919',
-        'poke-new-red-top':'#89061C'
+        'poke-new-red-top':'#89061C',
+        'poke-yellow-btn':'#FFDF18',
+        'poke-white-btn':'#FFF7C4',
+        'poke-border-button':'#787878',
+        'poke-border-pad':'#1E7DBB'
       }
     },
   },
