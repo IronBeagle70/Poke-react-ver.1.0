@@ -21,8 +21,8 @@ function PokemonProvider({children}) {
         setPokemon(res1.data);
         // console.log(res2.data);
         setSpecie(res2.data);
-        console.log(pokemon);
-        console.log(specie);
+        // console.log(pokemon);
+        // console.log(specie);
         // console.log(res.data);
         // return res.data;
     };
@@ -52,7 +52,7 @@ function PokemonProvider({children}) {
         e.preventDefault();
         // console.log(getPokemon(pokeValue));
         setPokeValue('');
-        console.log(parseInt(pokeValue));
+        // console.log(parseInt(pokeValue));
         setNextPokemon(parseInt(pokeValue));
     };
 

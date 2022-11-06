@@ -23,6 +23,9 @@ module.exports = {
         'poke-white-btn':'#FFF7C4',
         'poke-border-button':'#787878',
         'poke-border-pad':'#1E7DBB'
+      },
+      fontFamily:{
+        'poke-font':['Orbitron', 'sans-serif']
       }
     },
   },
